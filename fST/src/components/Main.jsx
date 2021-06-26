@@ -1,23 +1,38 @@
 import React, { Component, useState } from 'react';
 
 
-function MainComp() {
+class App extends Component {
+	constructor(props){
+	super(props)
+		this.state = {
+		count: 0
+	}
+	}
 
-	const[count, setCount] = useState(0)
-	
+
+	handleClick(){
+		this.setState({
+			count: this.state.count + 1
+		});
+	}
+
+		render(){
+
 		return (
 		<div>
-
-		<h1>Hello {count}</h1>
-		<button onClick={() => setCount(count + 1)}>Click here</button>
+		<h1>You've clicked the button {this.state.count} times</h1>
+		<button onClick={()=> 
+			this.handleClick()}>Click here</button>
 		</div>
 		
 		)
+
+		}
 	}
 
 
 
 
 
-export default MainComp;
+export default App;
 
