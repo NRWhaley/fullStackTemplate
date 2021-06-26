@@ -1,10 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
-class MainComp extends Component {
-	render() {
 
-		return <h1>'Hello'</h1>
-	};
-}
+function MainComp() {
+
+	const[count, setCount] = useState(0)
+	
+		return (
+		<div>
+
+		<h1>Hello {count}</h1>
+		<button onClick={() => setCount(count + 1)}>Click here</button>
+		</div>
+		
+		)
+	}
+
+
+
+
 
 export default MainComp;
+
