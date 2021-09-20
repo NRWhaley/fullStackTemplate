@@ -1,6 +1,10 @@
+
+//const nodeExternals = require('webpack-node-externals');
 module.exports = {
 	entry: __dirname+'/src/App.jsx',
 	mode: 'production',
+	target: 'node',
+//	externals: [nodeExternals({importType: 'umd'})],
 	output: {
 		path: __dirname+'/public/js',
 		filename: 'bundle.js'

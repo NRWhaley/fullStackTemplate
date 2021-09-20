@@ -17,7 +17,7 @@ app.use('/public', express.static(__dirname+'/../public'));
 app.use('/api', api);
 
 // Setting up node js server
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3003;
 let server = app.listen(port, () => console.log(`Server running on port ${port}...`));
 
 // Basic Routing
